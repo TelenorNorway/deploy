@@ -5,6 +5,7 @@ import z from "../_deps/z.ts";
 export interface UserAbstraction<Metadata, Argument> {
   readonly meta?: z.ZodSchema<Metadata>;
   readonly arg?: z.ZodSchema<Argument>;
+
   unabstract(data: {
     selfRepository: string;
     selfVersion: string;

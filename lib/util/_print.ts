@@ -1,13 +1,14 @@
-import { sprintf } from "./_deps/std.ts";
-import { fromFileUrl, relative } from "./_deps/std.ts";
 import {
   black,
   bold,
   brightBlue,
   brightRed,
   brightYellow,
+  fromFileUrl,
+  relative,
+  sprintf,
   underline,
-} from "./_deps/std.ts";
+} from "../_deps/std.ts";
 import { StackTraceElement } from "./_stack_parser.ts";
 
 abstract class Output {
