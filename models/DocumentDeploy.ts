@@ -8,4 +8,4 @@ const schema = z.array(
 );
 
 export default schema;
-export type DocumentDeployType = z.infer<typeof schema>;
+export type DocumentDeployType = Omit<z.infer<typeof schema>, "type">;
