@@ -1,5 +1,5 @@
-export type * from "./DeployAction.ts";
-export { default as DeployAction } from "./DeployAction.ts";
+export type * from "./DeployAbstraction.ts";
+export { default as DeployAbstraction } from "./DeployAbstraction.ts";
 
 export type * from "./Document.ts";
 export { default as Document } from "./Document.ts";
