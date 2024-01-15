@@ -10,4 +10,4 @@ const schema = z.object({
 }).strict();
 
 export default schema;
-export type KubernetesManifestType = z.infer<typeof schema>;
+export type KubernetesManifestType = Omit<z.infer<typeof schema>, "type">;
