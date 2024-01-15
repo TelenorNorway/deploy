@@ -9,4 +9,4 @@ const schema = z.object({
 });
 
 export default schema;
-export type DeployAbstractionType = z.infer<typeof schema>;
+export type DeployAbstractionType = Omit<z.infer<typeof schema>, "type">;
