@@ -6,6 +6,8 @@ export interface UserAbstraction<Metadata, Argument> {
   readonly meta?: z.ZodSchema<Metadata>;
   readonly arg?: z.ZodSchema<Argument>;
   unabstract(data: {
+    selfRepository: string;
+    selfVersion: string;
     arg: z.infer<z.ZodSchema<Argument>>;
     meta: z.infer<z.ZodSchema<Metadata>>;
   }): Promise<DocumentDeployType[]> | DocumentDeployType[];
@@ -18,6 +20,8 @@ export function defineAbstraction<Metadata, Argument>(
   },
   unabstract: (
     data: {
+      selfRepository: string;
+      selfVersion: string;
       meta: z.infer<z.ZodSchema<Metadata>>;
       arg: z.infer<z.ZodSchema<Argument>>;
     },
@@ -31,6 +35,8 @@ export function defineAbstraction<Metadata>(
   },
   unabstract: (
     data: {
+      selfRepository: string;
+      selfVersion: string;
       meta: z.infer<z.ZodSchema<Metadata>>;
     },
   ) => Promise<DocumentDeployType[]> | DocumentDeployType[],
@@ -43,6 +49,8 @@ export function defineAbstraction<Argument>(
   },
   unabstract: (
     data: {
+      selfRepository: string;
+      selfVersion: string;
       arg: z.infer<z.ZodSchema<Argument>>;
     },
   ) => Promise<DocumentDeployType[]> | DocumentDeployType[],
@@ -53,7 +61,12 @@ export function defineAbstraction(
     arg?: z.ZodSchema<{}>;
     meta?: z.ZodSchema<{}>;
   },
-  unabstract: () => Promise<DocumentDeployType[]> | DocumentDeployType[],
+  unabstract: (
+    data: {
+      selfRepository: string;
+      selfVersion: string;
+    },
+  ) => Promise<DocumentDeployType[]> | DocumentDeployType[],
 ): UserAbstraction<unknown, unknown>;
 
 export function defineAbstraction(
