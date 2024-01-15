@@ -5,7 +5,7 @@ import DocumentDeploy from "./DocumentDeploy.ts";
 
 const schema = z.object({
   metadata: DocumentMetadata.optional(),
-  deploy: DocumentDeploy,
+  deploy: DocumentDeploy.array(),
 });
 
 export default schema;
