@@ -8,7 +8,7 @@ const schema = z.object({
 }).strict();
 
 export default schema;
-export type RecommendedMetadataAsRequired = Omit<
+export type RecommendedMetadataAsRequiredType = Omit<
   z.infer<typeof schema>,
   "type"
 >;
