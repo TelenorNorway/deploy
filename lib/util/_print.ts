@@ -60,8 +60,8 @@ const DEBUG = new class extends Output {
   actions = console.debug;
   console = console.debug;
 
-  #debugInfoRegex = /debugInfo\([^\)]*\)/;
-  #boldRegex = /\<[^\>]*\>/;
+  #debugInfoRegex = /debugInfo\([^\)]*\)/g;
+  #boldRegex = /\<[^\>]*\>/g;
 
   sprintf(format: string, args: unknown[]): string {
     const message = super.sprintf(format, args);
