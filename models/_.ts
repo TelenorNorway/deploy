@@ -12,3 +12,6 @@ export { default as DocumentMetadata } from "./DocumentMetadata.ts";
 
 export type * from "./KubernetesManifest.ts";
 export { default as KubernetesManifest } from "./KubernetesManifest.ts";
+
+export type * from "./RecommendedMetadataAsRequired.ts";
+export { default as RecommendedMetadataAsRequired } from "./RecommendedMetadataAsRequired.ts";
