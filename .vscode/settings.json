@@ -3,5 +3,6 @@
 		"editor.defaultFormatter": "denoland.vscode-deno",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
-	}
+	},
+	"deno.config": ".vscode/deno.json"
 }

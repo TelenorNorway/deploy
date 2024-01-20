@@ -1,0 +1,5 @@
+{
+	"imports": {
+		"deploy": "./mod.ts"
+	}
+}
